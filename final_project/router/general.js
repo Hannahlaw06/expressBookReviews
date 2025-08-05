@@ -15,14 +15,13 @@ public_users.post("/register", (req,res) => {
     return res.status(300).json({message: "Username already exists, Choose a different one"});
   }
   users.push({username: username, password: password });
-  
+
   return res.status(300).json({message: "Yet to be implemented"});
 });
 
 // Get the book list available in the shop
 public_users.get('/',function (req, res) {
     res.send(JSON.stringify(books,null,4));
-  return res.status(300).json({message: "Yet to be implemented"});
 });
 
 // Get book details based on ISBN
